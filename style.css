@@ -1,13 +1,19 @@
+.slider,
+.slider * {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
 .slider {
 	position: relative;
-	width: 100%;
+	width: 400px;
 	height: 200px;
 	margin: 50px auto 0;
 	/* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
 	user-select: none;
 	/* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
 	touch-action: pan-y;
-	border: 2px solid #151ca8;
 }
 
 /* Если где-то внутри слайдера будут изображения, то нужно задать им
@@ -17,10 +23,9 @@ pointer-events: none, чтобы они не перетаскивались мы
 }
 
 .slider-list {
-	width: 100%;
+	width: 400px;
 	height: 200px;
 	overflow: hidden;
-	border: 2px solid #a89015;
 }
 
 .slider-list.grab {
@@ -33,11 +38,10 @@ pointer-events: none, чтобы они не перетаскивались мы
 
 .slider-track {
 	display: flex;
-	border: 2px solid #2ba815;
 }
 
 .slide {
-	width: 200px;
+	width: 400px;
 	height: 200px;
 	/* Чтобы слайды не сжимались */
 	flex-shrink: 0;
